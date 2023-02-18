@@ -38,27 +38,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	var allergy_count = 0;      //variable that counts allergy answers
-        var cold_count = 0;         //variable that counts cold answers
-	var allergyPercent = 0;     //variable that stores percentage of allergy 
-	var coldPercent = 0;        //variable that stores percentage of cold 
+	var multiplesclerosis_count = 0;      //variable that counts multiple sclerosis answers
+        var lupus_count = 0;         //variable that counts lupus answers
+	var multiplesclerosis = 0;     //variable that stores percentage of multiple sclerosis 
+	var lupusPercent = 0;        //variable that stores percentage of lupus 
 	
-        function allergyAdd(){                     //function that increments varible allergy_count when allergy button is clicked
-            allergy_count = allergy_count + 1;
-		alert("Allergy count is: " + allergy_count); //Changed alert text to show what the count indicated because it was confusing having the alert display a number without showing what the number meant//
+        function multiplesclerosisAdd(){                     //function that increments varible multiplesclerosis_count when allergy button is clicked
+            multiplesclerosis_count = multiplesclerosis_count + 1;
+		alert("MS count is: " + multiplesclerosis_count); //Changed alert text to show what the count indicated because it was confusing having the alert display a number without showing what the number meant//
 
         }
 
-        function coldAdd(){                       //function that increments varible cold_count when cold button is clicked
-            cold_count = cold_count + 1;
-		alert("Cold count is: " + cold_count);      //Changed alert text to show what the count indicated
+        function lupusAdd(){                       //function that increments varible lupus_count when cold button is clicked
+            lupus_count = lupus_count + 1;
+		alert("Lupus count is: " + lupus_count);      //Changed alert text to show what the count indicated
         }
 	
 	function calcResults(){          //created function to calculate result percentages
-            allergyPercent = (allergy_count / (allergy_count + cold_count)) * 100;      
-	    coldPercent = (cold_count / (allergy_count + cold_count)) * 100;
+            multiplesclerosisPercent = (multiplesclerosis_count / (multiplesclerosis_count + lupus_count)) * 100;      
+	    lupusPercent = (lupus_count / (multiplesclerosis_count + lupus_count)) * 100;
 	    var resultText = document.getElementById("displayresults");    // variable captures content of paragraph in results page
-            resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + "%";     //outputting actual results by changing resultText from paragraph content to actual results I want displayed. This is where I changed HTML content with JavaScript
+            resultText.innerHTML = "Probability it is multiple sclerosis = " + multiplesclerosisPercent + "%" + "<br> Probability it is a lupus = " + lupusPercent + "%";     //outputting actual results by changing resultText from paragraph content to actual results I want displayed. This is where I changed HTML content with JavaScript
 	}
 
 </script>	
@@ -90,7 +90,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <body>
 	
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Cold or Allergies?</h1>
+		<h1>Lupus or Multiple Sclerosis?</h1>
 	</div>
 	
 	
@@ -108,8 +108,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		<div id="content" class="w3-container">
 			<p>Are your eyes watery or itchy?</p>    <!--This is where I asked my first question -->
-			<a href="#two" onclick="allergyAdd();"class="w3-btn w3-black"> Yes </a>  <!--This is where I created the yes button for question one + I triggered a JavaScript event to increase variable of allergy count when yes button is clicked -->
-			<a href="#two" onclick="coldAdd();"class="w3-btn w3-black"> No </a>  <!--This is where I created the no button for question one + I triggered a JavaScript event to increase variable of cold count when no button is clicked-->
+			<a href="#two" onclick="multiplesclerosisAdd();"class="w3-btn w3-black"> Yes </a>  <!--This is where I created the yes button for question one + I triggered a JavaScript event to increase variable of multiplesclerosis count when yes button is clicked -->
+			<a href="#two" onclick="lupusAdd();"class="w3-btn w3-black"> No </a>  <!--This is where I created the no button for question one + I triggered a JavaScript event to increase variable of lupus count when no button is clicked-->
 		</div>
 	</div>
 
@@ -121,8 +121,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		<div id="content" class="w3-container">
 			<p>Do you have a fever?</p>    <!--This is where I asked my second question -->
-		        <a href="#three" onclick="coldAdd();"class="w3-btn w3-black"> Yes </a>  <!--This is where I created the yes button for question two + I triggered a JavaScript event to increase variable of cold count when yes button is clicked -->
-		        <a href="#three" onclick="allergyAdd();"class="w3-btn w3-black"> No </a>  <!--This is where I created the no button for question two + I triggered a JavaScript event to increase variable of allergy count when no button is clicked-->
+		        <a href="#three" onclick="lupusAdd();"class="w3-btn w3-black"> Yes </a>  <!--This is where I created the yes button for question two + I triggered a JavaScript event to increase variable of lupus count when yes button is clicked -->
+		        <a href="#three" onclick="multiplesclerosisAdd();"class="w3-btn w3-black"> No </a>  <!--This is where I created the no button for question two + I triggered a JavaScript event to increase variable of multiplesclerosis count when no button is clicked-->
 		</div>
 	</div>	
 
@@ -133,8 +133,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		<div id="content" class="w3-container">
 			<p>Do you have a sore throat?</p>    <!--This is where I asked my third question -->
-		        <a href="#four" onclick="coldAdd();"class="w3-btn w3-black"> Yes </a>  <!--This is where I created the yes button for question three + I triggered a JavaScript event to increase variable of cold count when yes button is clicked -->
-		        <a href="#four" onclick="allergyAdd();"class="w3-btn w3-black"> No </a>  <!--This is where I created the no button for question three + I triggered a JavaScript event to increase variable of allergy count when no button is clicked-->
+		        <a href="#four" onclick="lupusAdd();"class="w3-btn w3-black"> Yes </a>  <!--This is where I created the yes button for question three + I triggered a JavaScript event to increase variable of lupus count when yes button is clicked -->
+		        <a href="#four" onclick="multiplesclerosisAdd();"class="w3-btn w3-black"> No </a>  <!--This is where I created the no button for question three + I triggered a JavaScript event to increase variable of multiplesclerosis count when no button is clicked-->
 		</div>
 	</div>	
 	
@@ -146,8 +146,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		<div id="content" class="w3-container">
 			<p>Are your symptoms seasonal or chronic?</p>    <!--This is where I asked my fourth question -->
-		        <a href="#resultsPage" onclick="allergyAdd();"class="w3-btn w3-black"> Yes </a>  <!--This is where I created the yes button for question four + I triggered a JavaScript event to increase variable of allergy count when yes button is clicked -->
-		        <a href="#resultsPage" onclick="coldAdd();"class="w3-btn w3-black"> No </a>  <!--This is where I created the no button for question four + I triggered a JavaScript event to increase variable of cold count when no button is clicked-->
+		        <a href="#resultsPage" onclick="multiplesclerosisAdd();"class="w3-btn w3-black"> Yes </a>  <!--This is where I created the yes button for question four + I triggered a JavaScript event to increase variable of multiplesclerosis count when yes button is clicked -->
+		        <a href="#resultsPage" onclick="lupusAdd();"class="w3-btn w3-black"> No </a>  <!--This is where I created the no button for question four + I triggered a JavaScript event to increase variable of lupus count when no button is clicked-->
 		</div>
 	</div>
 	
